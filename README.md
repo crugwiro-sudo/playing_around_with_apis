@@ -35,4 +35,6 @@ This is a static frontend, so any API key in `app.js` is visible to visitors. Do
 - `app.js` — API request, data normalization, filtering, sorting, and rendering
 - `style.css` — page and country-card styles
 
-    
+## Youtube Video 
+
+    - `video url` - "https://youtu.be/3oO8vBWdLbE"
