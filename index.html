@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        :root{
-            --bg: #eef2f4;
-            --panel: #ffffff;
-            --ink: #14262e;
-            --muted: #5b6e77;
-            --line: #d3dde1;
-            --accent: #1d4ed8;
-            --accent-soft: #e0e8fd;
-        }
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-
-        }
-        body{
-            margin: 0;
-            background: var(--bg);
-            color: var(--ink);
-            font: 16px/1.5 system-ui, sans-serif;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Country Explorer</h1>
+        <p>Data from the REST Countries API</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <input type="search" name="search" id="search" placeholder="Search for a country or city">
+            <select name="" id="region">
+                <option value="">All regions</option>
+            </select>
+            <select name="" id="sort">
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="pop-desc">Population (High to Low)</option>
+                <option value="pop-asc">Population (Low to High)</option>
+                <option value="area-desc">Area (Large to Small)</option>
+            </select>
+        </div>
+
+        <p id="status">Loading...</p>
+        <div id="results" class="grid"></div>
+    </main>
+    <script src="app.js"></script>
 </body>
 </html>
